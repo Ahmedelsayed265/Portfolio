@@ -1,9 +1,9 @@
-//-------gsap intro animation---------//
+//-------gsap intro animation---------------------------------------------------------//
 const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
 tl.to(".text", { y: "0%", duration: 1, stagger: 0.25 });
 tl.to(".slider", { y: "-100%", duration: 1.5, delay: 0.25 });
 tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
-//------------before----------//
+//------------before------------------------------------------------------------------//
 tl.fromTo("nav", { opacity: 0 }, { opacity: 1, duration: 1 });
 tl.fromTo("#home", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
 tl.fromTo("#about", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
@@ -13,7 +13,7 @@ tl.fromTo("#projects", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
 tl.fromTo("#blog", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
 tl.fromTo(".to-top", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
 tl.fromTo(".testimonial", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
-//--------------(light-dark)theme---------//
+//--------------(light-dark)theme-----------------------------------------------------//
 theme_icon = document.querySelector("#theme i");
 theme_icon.addEventListener("click", () => {
   document.body.classList.toggle("light-theme");
@@ -27,21 +27,21 @@ theme_icon.addEventListener("click", () => {
     document.querySelector(".logo a img").src = "images/LOGO.png";
   }
 });
-//-------typed.js landing section---------//
+//-------typed.js landing section--------------------------------------------------//
 $("document").ready(function () {
   var typed = new Typed("#typed", {
     strings: [
-      "Website designer..",
-      "Senior Front End..",
-      "Back End devloper..",
-      "Full Stack developer..",
+      "Website designer.",
+      "Senior Front End.",
+      "Back End devloper.",
+      "Full Stack developer.",
     ],
     backSpeed: 80,
     typeSpeed: 100,
     loop: true,
     shuffle: true,
   });
-  //----------- testimonial ------------//
+  //----------- testimonial -------------------------------------------------------//
   let swiper = new Swiper(".mySwiper", {
     spaceBetween: 24,
     slidesPerView: 3,
@@ -66,7 +66,7 @@ $("document").ready(function () {
     },
   });
 });
-//--------------about section counter-----//
+//--------------about section counter function----------------------------//
 let numbers = document.querySelectorAll(".number");
 let started = false;
 function startCount(element) {
@@ -78,19 +78,19 @@ function startCount(element) {
     }
   }, 2000 / goal);
 }
-//-------add position fixed for nav ---------//
+//----------------------ON Scroll Actions-----------------------//
 let nav = document.getElementById("nav");
 let aboutSec = document.getElementById("about");
 window.onscroll = function () {
   if (this.scrollY >= about.offsetTop) {
-    nav.classList.remove("navigation");
-    nav.classList.add("fixed");
-    //--------------about section counter-----//
+    //=============about section counter=============//
     if (!started) {
       numbers.forEach((num) => startCount(num));
     }
     started = true;
-    //--------------about section counter-----//
+    //=============about section counter============//
+    nav.classList.remove("navigation");
+    nav.classList.add("fixed");
   } else {
     nav.classList.remove("fixed");
     nav.classList.add("navigation");
@@ -110,7 +110,7 @@ navBtn.addEventListener("click", () => {
     navigation.classList.remove("active");
   }
 });
-//---------------go down-------------//
+//---------------go down----------------------//
 let button = document.getElementById("scroll");
 button.addEventListener("click", () => {
   scrollTo({
@@ -123,12 +123,12 @@ let navLinks = document.querySelectorAll(".list");
 let sections = document.querySelectorAll(".section");
 let current;
 window.addEventListener("scroll", () => {
-  //----------to-top-------//
+  //================to-top============//
   let top = document.getElementById("top");
   this.scrollY >= 635
     ? top.classList.add("active")
     : top.classList.remove("active");
-  //----------to-top-------//
+  //=============to-top=============//
   sections.forEach((section) => {
     let sectionTop = section.offsetTop;
     if (pageYOffset >= sectionTop) {
