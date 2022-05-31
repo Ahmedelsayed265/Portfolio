@@ -1,0 +1,83 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+//----light----
+$white-smoke: #f5f5f5;
+$white: #ffffff;
+$lightBlack1: #222;
+$lightBlack2: #555555;
+$black: #000000;
+$blue: #e7a631;
+$Blue: #227cfd;
+$light_blue: #29129d;
+$border: 1px solid rgba(0, 0, 0, 0.1);
+$shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+$shadow_dark: rgba(0, 0, 0, 0.25) 0px 1px 4px;
+$sexyBlue: linear-gradient(to top, #403b4a, #e7e9bb);
+$star: #f7c016;
+$Para: #50535b;
+//----dark----
+$D_blue: #212121;
+$D_links: #eeeff1;
+$D_icons: #888888;
+$D_body: #111;
+@mixin centerFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin centerAbsolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin circleFrame {
+  position: relative;
+  cursor: pointer;
+  border: 5px solid $D_body;
+  transition: 0.5s;
+  &:hover {
+    border-color: $D_blue;
+  }
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+@mixin circlePhoto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@mixin clearInput {
+  border: none;
+  background: none;
+  outline: none;
+}
+@mixin status {
+  padding: 2px 4px;
+  color: $box;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}

@@ -1,0 +1,2233 @@
+@import "./sass/mixins";
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-track {
+  background-color: $D_blue;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $D_icons;
+  border-radius: 5px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0,
+    rgba(60, 64, 67, 0.15) 0 2px 6px 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #808080;
+}
+::selection {
+  color: $D_icons;
+}
+.intro {
+  background-color: $D_body;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: $white;
+  @include centerFlex();
+  .intro-text {
+    h2 {
+      @include centerFlex();
+      letter-spacing: 1px;
+      .text {
+        color: $D_icons;
+      }
+    }
+    .hide {
+      background: $D_body;
+      overflow: hidden;
+      span {
+        transform: translateY(100%);
+      }
+    }
+  }
+}
+.slider {
+  background: $sexyBlue;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+}
+body {
+  transition: all 0.5s;
+  position: relative;
+  scroll-behavior: smooth;
+  background-color: $D_body !important;
+  &.active {
+    overflow: hidden;
+  }
+  &.light-theme {
+    background-color: $white !important;
+    header {
+      &.active.fixed {
+        background: linear-gradient(
+          143.98deg,
+          rgba(255, 255, 255, -0.89) 0%,
+          rgba(255, 255, 255, -0.78) 100%
+        );
+        backdrop-filter: blur(2px);
+      }
+      nav {
+        &.fixed {
+          background-color: $white;
+          box-shadow: $shadow;
+        }
+        ul {
+          li {
+            a {
+              color: $black;
+              &::after {
+                background-color: $light_blue;
+              }
+              &:hover {
+                color: $light_blue;
+              }
+            }
+            .active {
+              color: $light_blue;
+            }
+          }
+        }
+        .logo {
+          h1 {
+            color: $light_blue;
+            &:hover {
+              color: $light_blue;
+            }
+          }
+        }
+        .right {
+          i {
+            color: $light_blue;
+            &:hover {
+              color: $light_blue;
+            }
+          }
+        }
+      }
+      .landing {
+        .left-content {
+          background-color: $white;
+          .inner-content {
+            aside {
+              ul {
+                li {
+                  a {
+                    i {
+                      color: $light_blue;
+                    }
+                  }
+                }
+              }
+              .scrol {
+                span {
+                  background: $light_blue;
+                }
+                .scroll-icon {
+                  border: 1px solid $light_blue;
+                  i {
+                    color: $light_blue;
+                  }
+                }
+              }
+            }
+            main {
+              p {
+                color: $black;
+              }
+              .hey {
+                color: $light_blue;
+                font-weight: 500;
+              }
+              h2 {
+                color: $light_blue;
+              }
+              .h1 {
+                color: $light_blue;
+              }
+              .btns {
+                a {
+                  background-color: $white-smoke;
+                  color: $light_blue;
+                  box-shadow: $shadow;
+                  transition: 0.5s;
+                  font-weight: 600;
+                  &:hover {
+                    background-color: $light_blue;
+                    color: $white;
+                    font-weight: 400;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .container {
+      #about {
+        .head {
+          color: $light_blue;
+        }
+        p {
+          color: $black;
+        }
+        .square_frame {
+          border-color: #dadada;
+        }
+        .count {
+          h2 {
+            color: $light_blue;
+          }
+        }
+        .botton {
+          a {
+            background-color: $white-smoke;
+            box-shadow: $shadow;
+            font-weight: 600;
+            color: $light_blue;
+            &:hover {
+              background-color: $light_blue;
+              color: $white;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+      #skills {
+        .head {
+          color: $light_blue;
+        }
+        p {
+          color: $black;
+        }
+        .skills-grid {
+          h4 {
+            color: $light_blue;
+          }
+          .skill-icon {
+            i {
+              color: $light_blue;
+            }
+          }
+          .open-icon {
+            i {
+              color: $light_blue;
+            }
+          }
+          .Acordion {
+            .prog {
+              .bar {
+                background-color: $white-smoke;
+                span {
+                  background-color: $light_blue;
+                }
+              }
+            }
+          }
+        }
+      }
+      .qualifications {
+        .head {
+          color: $light_blue;
+        }
+        p {
+          color: $black;
+        }
+        .qual-head {
+          .edu-work {
+            .icon {
+              color: $light_blue;
+              @include centerFlex();
+            }
+            h4 {
+              color: $light_blue;
+            }
+          }
+        }
+        .first {
+          .circle {
+            background-color: $light_blue;
+          }
+          .line {
+            background-color: $light_blue;
+          }
+        }
+        .qual {
+          h5 {
+            color: $light_blue;
+          }
+        }
+      }
+      #services {
+        .head {
+          color: $light_blue;
+        }
+        p {
+          color: $black;
+        }
+        .ser-card {
+          background-color: $white-smoke;
+          box-shadow: $shadow;
+          &:hover {
+            box-shadow: none;
+          }
+          &:hover::after {
+            border-color: $light_blue;
+          }
+          &:hover::before {
+            border-color: $light_blue;
+          }
+          h2 {
+            color: $light_blue;
+          }
+          .icon i {
+            color: $light_blue;
+          }
+          span {
+            color: $light_blue;
+          }
+        }
+        .pop_up {
+          &.active {
+            display: block;
+          }
+          background: $white_smoke;
+          h4 {
+            color: $light_blue;
+          }
+          p {
+            color: $black;
+          }
+          span {
+            i {
+              color: $light_blue;
+            }
+          }
+          i {
+            color: $light_blue;
+          }
+        }
+      }
+      #projects {
+        .head {
+          color: $light_blue;
+        }
+        .sup-title {
+          color: $black;
+        }
+        .left-btn {
+          color: $light_blue;
+          &.disable {
+            color: #dadada;
+          }
+        }
+        .right-btn {
+          color: $light_blue;
+          &.disable {
+            color: #dadada;
+          }
+        }
+        .carousel {
+          .carousel-track-container {
+            .carousel_nav {
+              .carousel_indicator {
+                background-color: #dadada;
+                &.curunt_slide {
+                  background-color: $light_blue;
+                }
+              }
+            }
+            .carousel-track {
+              .carousel-slide {
+                .image {
+                  background-color: $white-smoke;
+                }
+                .content {
+                  h3 {
+                    color: $light_blue;
+                  }
+                  p {
+                    color: $black;
+                  }
+                  .botton {
+                    background-color: $white-smoke;
+                    box-shadow: $shadow;
+                    transition: 0.5s;
+                    &:hover {
+                      background-color: $light_blue;
+                    }
+                    &:hover a {
+                      color: $white;
+                      font-weight: 400;
+                    }
+                    a {
+                      color: $light_blue;
+                      font-weight: 600;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      #blog {
+        .head {
+          color: $light_blue;
+        }
+        .sup-title {
+          color: $black;
+        }
+        .blog-card {
+          &::after {
+            background-color: $light_blue;
+          }
+          background-color: $white-smoke;
+          h5 {
+            color: $light_blue;
+          }
+          p {
+            color: $black;
+          }
+          .botton {
+            &:hover a {
+              color: $D_icons;
+              transition: 0.5s;
+            }
+            a {
+              color: $light_blue;
+            }
+          }
+        }
+      }
+      .testimonial {
+        .head {
+          color: $light_blue;
+        }
+        .sup-title {
+          color: $black;
+        }
+        .mySwiper {
+          .swiper-wrapper {
+            .swiper-slide {
+              .inner-card {
+                border: 1px solid transparent;
+                background: $white-smoke;
+                box-shadow: $shadow;
+                &:hover {
+                  border-color: $light_blue;
+                  box-shadow: none;
+                }
+                .frame {
+                  @include circleFrame();
+                  border: 5px solid $white;
+                  transition: 0.5s;
+                  &:hover {
+                    border-color: $white-smoke;
+                  }
+                  img {
+                    @include circlePhoto();
+                  }
+                }
+                h5 {
+                  color: $light_blue;
+                }
+                .loc {
+                  color: $black;
+                }
+                .comment {
+                  i {
+                    color: $light_blue;
+                  }
+                  color: $black;
+                }
+                .review {
+                  i {
+                    color: $light_blue;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .swiper-pagination-bullet {
+          background-color: #808080;
+          &-active {
+            background-color: $light_blue;
+          }
+        }
+      }
+      #contact {
+        .head {
+          color: $light_blue;
+        }
+        .sup-title {
+          color: $black;
+        }
+        .contact-icon {
+          i {
+            color: $light_blue;
+          }
+        }
+        .contact-info {
+          h6 {
+            color: $light_blue;
+          }
+          a {
+            color: $black;
+            &:hover {
+              color: $light_blue;
+            }
+          }
+          .free1 {
+            color: $black;
+            &:hover {
+              color: #0bd934;
+            }
+          }
+          .free2 {
+            color: $black;
+            &:hover {
+              color: #6cc0e5;
+            }
+          }
+          p {
+            color: $black;
+            a {
+              color: $black;
+              &:hover {
+                color: $light_blue;
+              }
+            }
+          }
+        }
+        form {
+          .input_field {
+            input {
+              background-color: $white-smoke;
+              color: $light_blue;
+              box-shadow: $shadow;
+              &::placeholder {
+                color: $light_blue;
+              }
+            }
+          }
+          .form-floating_area {
+            textarea {
+              background-color: $white-smoke;
+              color: $light_blue;
+              box-shadow: $shadow;
+              &::placeholder {
+                color: $light_blue;
+              }
+            }
+          }
+          button {
+            background-color: $white-smoke;
+            box-shadow: $shadow;
+            color: $light_blue;
+            font-weight: 600;
+            transition: 0.5s;
+            &:hover {
+              background-color: $light_blue;
+              box-shadow: none;
+              color: $white;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+    footer {
+      border: 1px solid transparent;
+      background-color: $white-smoke;
+      .subscribe {
+        background-color: $white;
+        box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+          rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+        form {
+          input {
+            color: $light_blue;
+            &::placeholder {
+              color: $light_blue;
+            }
+          }
+          button {
+            color: $light_blue;
+            &:hover {
+              color: $blue;
+            }
+          }
+        }
+        .title {
+          span {
+            background-color: $light_blue;
+          }
+          p {
+            color: $light_blue;
+          }
+        }
+      }
+      h4 {
+        color: $light_blue;
+      }
+      .social {
+        a {
+          border: 1px solid $light_blue;
+          color: $light_blue;
+        }
+      }
+      .links {
+        a {
+          color: $black;
+        }
+        p {
+          color: $black;
+        }
+      }
+      .copyright {
+        i {
+          color: $light_blue;
+        }
+        p {
+          color: $black;
+        }
+      }
+    }
+    .to-top {
+      background-color: $white-smoke;
+      box-shadow: $shadow;
+      color: $light_blue;
+      &:hover {
+        color: $white;
+        background-color: $light_blue;
+        box-shadow: none;
+      }
+    }
+  }
+  header {
+    position: relative;
+    height: 100vh;
+    .navigation {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      @include space-between();
+      padding-top: 5px;
+      z-index: 9;
+    }
+    nav {
+      &.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-shadow: $shadow_dark;
+        @include space-between();
+        padding-top: 5px;
+        z-index: 999999;
+        background-color: $D_blue;
+      }
+      ul {
+        padding: 0 !important;
+        margin: 0 !important;
+        li {
+          display: inline-block;
+          list-style: none;
+          padding: 0 15px;
+          a {
+            position: relative;
+            color: $white_smoke;
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: -3px;
+              left: 50%;
+              transform: translateX(-50%);
+              height: 1px;
+              width: 0;
+              transition: 0.3s;
+              background-color: $blue;
+            }
+            &:hover {
+              color: $blue;
+              &::after {
+                width: 100%;
+              }
+            }
+          }
+          .active {
+            color: $blue;
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+      }
+      .logo {
+        margin-left: 30px;
+        z-index: 255;
+        img {
+          height: 50px;
+        }
+      }
+      .right {
+        span {
+          cursor: pointer;
+        }
+        div {
+          display: none;
+        }
+        margin-right: 30px;
+        i {
+          padding: 0 15px;
+          color: $white-smoke;
+          font-size: 18px;
+          transform: scale(0.9);
+          &:hover {
+            color: $D_icons;
+          }
+        }
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+    .landing {
+      display: flex;
+      .right-slider {
+        z-index: 0;
+        width: 50%;
+        height: 100vh;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: initial;
+        }
+      }
+      .left-content {
+        background-color: $D_body;
+        width: 50%;
+        z-index: 0;
+        height: 100vh;
+        @include centerFlex();
+        .inner-content {
+          width: 100%;
+          @include centerFlex();
+          aside {
+            height: 100%;
+            @include centerFlex();
+            flex-direction: column;
+            min-width: 25%;
+            ul {
+              margin: 0;
+              padding: 0;
+              margin-top: 150px;
+              li {
+                list-style: none;
+                a {
+                  i {
+                    margin: 15px 5px;
+                    font-size: 22px;
+                    color: $blue;
+                    &:hover {
+                      transform: scale(1.1);
+                    }
+                  }
+                }
+              }
+            }
+            .scrol {
+              @include centerFlex();
+              flex-direction: column;
+              margin-top: 50px;
+              span {
+                width: 1px;
+                height: 50px;
+                background: $D_icons;
+              }
+              .scroll-icon {
+                margin: 10px 0;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                border: 1px solid $D_icons;
+                cursor: pointer;
+                position: relative;
+                i {
+                  color: $D_icons;
+                  font-size: 14px;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  animation: scroll 1s alternate infinite;
+                }
+              }
+            }
+            @keyframes scroll {
+              0% {
+                top: 50%;
+              }
+              100% {
+                top: 60%;
+              }
+            }
+          }
+          main {
+            min-width: 75%;
+            margin-top: 60px;
+            .qoute {
+              width: 95%;
+            }
+            p {
+              color: $D_icons;
+              margin-top: 20px;
+            }
+            .hey {
+              text-transform: uppercase;
+              color: $blue;
+              padding-left: 5px;
+            }
+            h2 {
+              margin-top: 20px;
+              color: $D_icons;
+            }
+            .h1 {
+              text-transform: uppercase;
+              color: $blue;
+            }
+            .btns {
+              display: flex;
+              gap: 40px;
+              width: 100%;
+              margin-top: 30px;
+              a {
+                height: 40px;
+                width: 120px;
+                background-color: $D_blue;
+                transition: 0.5s;
+                border-radius: 4px;
+                color: $white;
+                font-size: 14px;
+                text-decoration: none;
+                letter-spacing: 1px;
+                box-shadow: $shadow_dark;
+                @include centerFlex();
+                cursor: pointer;
+                &:hover {
+                  background-color: $blue;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .container {
+    #about {
+      height: 100vh;
+      .head {
+        color: $blue;
+        margin-top: 100px;
+        letter-spacing: 1px;
+      }
+      p {
+        color: $D_icons;
+      }
+      .contain_frame {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        @include centerFlex();
+      }
+      .square_frame {
+        width: 320px;
+        height: 320px;
+        position: absolute;
+        top: 45px;
+        left: 45px;
+        border: 10px solid $D_blue;
+      }
+      .image {
+        width: 320px;
+        height: 320px;
+        position: absolute;
+        top: 0;
+        left: 90px;
+        background-image: url(images/shot6-9ohtDE-ozQbnk-p6xV2q.jpg);
+        background-size: cover;
+      }
+      .count {
+        h2 {
+          color: $blue;
+          margin-top: 40px;
+          letter-spacing: 1px;
+        }
+      }
+      .botton {
+        a {
+          background-color: $D_blue;
+          text-decoration: none;
+          padding: 15px;
+          border-radius: 4px;
+          color: $white;
+          box-shadow: $shadow_dark;
+          font-size: 14px;
+          transition: 0.5s;
+          &:hover {
+            background-color: $blue;
+          }
+        }
+      }
+    }
+    #skills {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      .head {
+        color: $blue;
+        margin-top: 100px;
+        letter-spacing: 1px;
+      }
+      p {
+        color: $D_icons;
+      }
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        .in {
+          @include centerFlex();
+        }
+        .left,
+        .right {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+        }
+        h4 {
+          color: $D_icons;
+          width: 220px;
+        }
+        .skill-icon {
+          display: flex;
+          align-items: center;
+          min-width: 50px;
+          i {
+            color: $blue;
+            font-size: 26px;
+            padding: 10px;
+          }
+        }
+        .skill2 {
+          min-width: 52px;
+        }
+        .open-icon {
+          min-width: 30px;
+          i {
+            color: $blue;
+            font-size: 20px;
+            padding: 15px 10px 10px;
+            cursor: pointer;
+            min-width: 30px;
+            min-height: 30px;
+            transition: transform 0.3s;
+            &.active {
+              transform: rotate(180deg);
+            }
+          }
+        }
+        .skill {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 10px;
+          margin-top: 20px;
+          cursor: pointer;
+        }
+        .Acordion {
+          display: none;
+          opacity: 0;
+          width: 320px;
+          transition: opacity 0.5s;
+          &.active {
+            display: block;
+            opacity: 1;
+          }
+          .prog {
+            .bar {
+              background-color: $D_blue;
+              width: 100%;
+              height: 4px;
+              position: relative;
+              border-radius: 2px;
+              span {
+                background-color: $blue;
+                height: 4px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 2px;
+              }
+              .f {
+                width: 95%;
+              }
+              .s {
+                width: 85%;
+              }
+              .t {
+                width: 95%;
+              }
+              .fo {
+                width: 75%;
+              }
+              .fi {
+                width: 65%;
+              }
+              .fB {
+                width: 80%;
+              }
+              .sB {
+                width: 75%;
+              }
+              .tB {
+                width: 90%;
+              }
+              .foB {
+                width: 60%;
+              }
+              .fD {
+                width: 90%;
+              }
+              .sD {
+                width: 95%;
+              }
+              .tD {
+                width: 70%;
+              }
+              .foD {
+                width: 55%;
+              }
+              .fM {
+                width: 85%;
+              }
+              .sM {
+                width: 70%;
+              }
+              .tM {
+                width: 50%;
+              }
+              .foM {
+                width: 90%;
+              }
+            }
+          }
+        }
+      }
+    }
+    .qualifications {
+      height: 100vh;
+      .head {
+        color: $blue;
+        letter-spacing: 1px;
+        padding-top: 100px;
+        padding-bottom: 20px;
+      }
+      p {
+        color: $D_icons;
+      }
+      .qual-head {
+        @include centerFlex();
+        gap: 30px;
+        .edu-work {
+          cursor: pointer;
+          min-width: 150px;
+          @include centerFlex();
+          .icon {
+            min-width: 30px;
+            font-size: 24px;
+            color: $blue;
+            @include centerFlex();
+          }
+          h4 {
+            color: $D_icons;
+            @include centerFlex();
+            margin-left: 10px;
+          }
+        }
+      }
+      .first {
+        @include centerFlex();
+        flex-direction: column;
+        .circle {
+          width: 10px;
+          height: 10px;
+          background-color: $blue;
+          border-radius: 50%;
+          color: $blue;
+          @include centerFlex();
+        }
+        .line {
+          @include centerFlex();
+          width: 2px;
+          height: 75px;
+          color: $blue;
+          background-color: $blue;
+        }
+      }
+      .qual {
+        height: 80px;
+        h5 {
+          color: $blue;
+          letter-spacing: 1px;
+        }
+        p i {
+          padding-right: 5px;
+        }
+      }
+    }
+    #services {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      .head {
+        color: $blue;
+        letter-spacing: 1px;
+        padding-top: 100px;
+      }
+      p {
+        color: $D_icons;
+      }
+      .ser-card {
+        background-color: $D_blue;
+        box-shadow: $shadow_dark;
+        height: 300px;
+        width: 250px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 40px 30px 10px;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: transparent;
+          border-top: 1px solid transparent;
+          border-left: 1px solid transparent;
+          width: 0;
+          height: 0;
+          transition: 0.7s;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          background-color: transparent;
+          border-right: 1px solid transparent;
+          border-bottom: 1px solid transparent;
+          width: 0;
+          height: 0;
+          transition: 0.7s;
+        }
+        &:hover::after {
+          width: 100%;
+          height: 100%;
+          border-color: $blue;
+        }
+        &:hover::before {
+          width: 100%;
+          height: 100%;
+          border-color: $blue;
+        }
+        h2 {
+          color: $D_icons;
+        }
+        .icon i {
+          color: $blue;
+          font-size: 30px;
+          padding-bottom: 1.7rem;
+          margin-left: 10px;
+        }
+        span {
+          cursor: pointer;
+          color: $blue;
+          z-index: 66;
+          text-decoration: none;
+          font-size: 14px;
+          i {
+            font-size: 14px;
+          }
+          &:hover i {
+            padding-left: 5px;
+            transition: 0.5s;
+          }
+        }
+      }
+      .pop_up {
+        &.active {
+          display: block;
+        }
+        display: none;
+        z-index: 6666;
+        position: fixed;
+        top: 55%;
+        left: 50%;
+        padding: 20px;
+        width: 400px;
+        transform: translate(-50%, -50%);
+        background: $white_smoke;
+        border-radius: 10px;
+        h4 {
+          color: $blue;
+        }
+        p {
+          color: $D_body;
+        }
+        span {
+          cursor: pointer;
+          i {
+            color: $blue;
+            padding-top: 2px;
+            font-size: 24px;
+          }
+        }
+        i {
+          color: $blue;
+          padding-top: 3px;
+          padding-right: 10px;
+        }
+      }
+    }
+    #projects {
+      height: 100vh;
+      position: relative;
+      .head {
+        color: $blue;
+        letter-spacing: 1px;
+        padding-top: 100px;
+        text-align: center;
+      }
+      .sup-title {
+        color: $D_icons;
+        text-align: center;
+      }
+      .left-btn {
+        position: absolute;
+        top: 58%;
+        left: 50px;
+        @include clearInput();
+        color: $blue;
+        font-size: 26px;
+        z-index: 555;
+        &.disable {
+          pointer-events: none;
+          color: $D_blue;
+          transition: all 0.5s;
+        }
+      }
+      .right-btn {
+        position: absolute;
+        top: 58%;
+        right: 50px;
+        @include clearInput();
+        color: $blue;
+        font-size: 26px;
+        z-index: 555;
+        &.disable {
+          pointer-events: none;
+          color: $D_blue;
+          transition: all 0.5s;
+        }
+      }
+      .carousel {
+        position: relative;
+        width: 85%;
+        margin: 0 auto;
+        height: 60vh;
+        .carousel-track-container {
+          position: relative;
+          height: 100%;
+          overflow: hidden;
+          .carousel_nav {
+            position: absolute;
+            top: 85%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            .carousel_indicator {
+              margin: 0 5px;
+              width: 8px;
+              height: 8px;
+              border-radius: 50%;
+              background-color: $D_blue;
+              outline: none;
+              border: none;
+              &.curunt_slide {
+                transition: 0.5s;
+                background-color: $blue;
+              }
+            }
+          }
+          .carousel-track {
+            position: relative;
+            transition: 1s ease-in-out;
+            .carousel-slide {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              width: 100%;
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              .image {
+                width: 350px;
+                height: 250px;
+                background-color: $D_blue;
+                border-radius: 8px;
+                overflow: hidden;
+                video,
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+              }
+              .content {
+                width: 350px;
+                height: 250px;
+                h3 {
+                  color: $blue;
+                }
+                p {
+                  color: $D_icons;
+                }
+                .botton {
+                  height: 40px;
+                  width: 120px;
+                  background-color: $D_blue;
+                  box-shadow: $shadow_dark;
+                  transition: 0.5s;
+                  border-radius: 4px;
+                  @include centerFlex();
+                  cursor: pointer;
+                  &:hover {
+                    background-color: $blue;
+                  }
+                  a {
+                    text-decoration: none;
+                    color: $white;
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    #blog {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      .head {
+        color: $blue;
+        margin-top: 100px;
+        letter-spacing: 1px;
+      }
+      .sup-title {
+        color: $D_icons;
+      }
+      .blog-card {
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0;
+          height: 3px;
+          background-color: $blue;
+        }
+        &:hover img {
+          transform: scale(1.1);
+        }
+        &:hover::after {
+          width: 100%;
+          transition: 0.5s;
+        }
+        background-color: $D_blue;
+        box-shadow: $shadow;
+        width: 300px;
+        height: 400px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        img {
+          cursor: pointer;
+          width: 100%;
+          height: 50%;
+          object-fit: cover;
+          transform: scale(1);
+          transition: 0.5s;
+        }
+        h5 {
+          color: $blue;
+          text-align: center;
+          padding: 10px 0;
+        }
+        p {
+          color: $D_icons;
+          text-align: center;
+          padding: 0 5px;
+        }
+        .botton {
+          height: 30px;
+          width: 100px;
+          border-radius: 4px;
+          align-self: center;
+          @include centerFlex();
+          cursor: pointer;
+          i {
+            padding-left: 4px;
+          }
+          &:hover a {
+            color: $white-smoke;
+            transition: 0.5s;
+          }
+          a {
+            text-decoration: none;
+            color: $blue;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .testimonial {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      .head {
+        color: $blue;
+        margin-top: 100px;
+        letter-spacing: 1px;
+      }
+      .sup-title {
+        color: $D_icons;
+      }
+      .mySwiper {
+        width: 100%;
+        .swiper-wrapper {
+          width: 100%;
+          height: 380px;
+          .swiper-slide {
+            .inner-card {
+              border: 1px solid transparent;
+              background: $D_blue;
+              transition: all 0.5s;
+              height: 310px;
+              position: relative;
+              border-radius: 10px;
+              box-shadow: $shadow_dark;
+              &:hover {
+                border-color: $blue;
+                box-shadow: none;
+              }
+              .frame {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                @include circleFrame();
+                img {
+                  @include circlePhoto();
+                }
+              }
+              h5 {
+                text-align: center;
+                color: $blue;
+                margin-top: -30px;
+              }
+              .loc {
+                text-align: center;
+                color: $D_icons;
+                width: 100%;
+              }
+              .comment {
+                font-size: 14px;
+                i {
+                  color: $D_icons;
+                  font-size: 18px;
+                  letter-spacing: 2px;
+                }
+                text-align: center;
+                color: $white;
+              }
+              .review {
+                position: absolute;
+                transform: translate(-50%, -50%);
+                bottom: 5px;
+                left: 50%;
+                gap: 5px;
+                i {
+                  color: $blue;
+                  cursor: pointer;
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .swiper-pagination-bullet {
+        background-color: $D_icons;
+        &-active {
+          background-color: $blue;
+        }
+      }
+    }
+    #contact {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      .head {
+        color: $blue;
+        margin-top: 100px;
+        letter-spacing: 1px;
+      }
+      .sup-title {
+        color: $D_icons;
+      }
+      .contact-icon {
+        min-width: 26px;
+        display: flex;
+        i {
+          color: $blue;
+          font-size: 24px;
+        }
+        img {
+          width: 100%;
+          height: 24px;
+          height: 24px;
+          object-fit: cover;
+        }
+      }
+      .contact-info {
+        padding-left: 10px;
+        width: 200px;
+        h6 {
+          color: $blue;
+          font-size: 18px;
+          letter-spacing: 1px;
+        }
+        a {
+          text-decoration: none;
+          color: $D_icons;
+          &:hover {
+            color: $blue;
+            transition: 0.5s;
+          }
+        }
+        .free1 {
+          transition: 0.5s;
+          color: #e7e9bb;
+          font-size: 14px;
+          text-decoration: none;
+          letter-spacing: 1px;
+          &:hover {
+            color: #0bd934;
+          }
+        }
+        .free2 {
+          transition: 0.5s;
+          color: #e7e9bb;
+          font-size: 14px;
+          text-decoration: none;
+          letter-spacing: 1px;
+          &:hover {
+            color: #6cc0e5;
+          }
+        }
+        p {
+          color: $D_icons;
+          a {
+            color: $D_icons;
+            text-decoration: none;
+            &:hover {
+              color: $blue;
+              transition: 0.5s;
+            }
+          }
+        }
+      }
+      form {
+        .input_field {
+          input {
+            @include clearInput();
+            background-color: $D_blue;
+            color: $white;
+            padding: 10px;
+            width: 100%;
+            border-radius: 4px;
+            box-shadow: $shadow_dark;
+            &::placeholder {
+              color: $D_icons;
+              font-size: 12px;
+            }
+          }
+        }
+        .form-floating_area {
+          textarea {
+            @include clearInput();
+            background-color: $D_blue;
+            color: $white;
+            padding: 10px;
+            width: 100%;
+            border-radius: 4px;
+            height: 180px;
+            box-shadow: $shadow_dark;
+            &::placeholder {
+              color: $D_icons;
+              font-size: 12px;
+            }
+          }
+        }
+        button {
+          @include clearInput();
+          @include centerFlex();
+          height: 40px;
+          width: 100%;
+          font-size: 14px;
+          background-color: $D_blue;
+          color: $white;
+          transition: 0.5s;
+          letter-spacing: 1px;
+          border-radius: 4px;
+          box-shadow: $shadow_dark;
+          &:hover {
+            background-color: $blue;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    border: 1px solid $D_blue;
+    background-color: $D_blue;
+    width: 100%;
+    height: 350px;
+    .subscribe {
+      @include centerFlex();
+      height: 50px;
+      background-color: $D_body;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      box-shadow: rgb(0, 0, 0) 3px 3px 6px 0px inset,
+        rgba(0, 0, 0, 0) -3px -3px 6px 1px inset;
+      form {
+        @include centerFlex();
+        input {
+          @include clearInput();
+          width: 85%;
+          color: $white;
+          &::placeholder {
+            color: $D_icons;
+            font-size: 14px;
+            letter-spacing: 1px;
+          }
+        }
+        button {
+          @include clearInput();
+          @include centerFlex();
+          color: $white;
+          width: 15%;
+          &:hover {
+            color: $blue;
+            transition: 0.5s;
+          }
+        }
+      }
+      .title {
+        display: flex;
+        justify-content: center;
+        span {
+          width: 1px;
+          height: 25px;
+          background-color: $white;
+          margin-left: 50px;
+        }
+        p {
+          color: $white;
+        }
+      }
+    }
+    h4 {
+      color: $blue;
+    }
+    .social {
+      width: 100%;
+      @include centerFlex();
+      a {
+        @include centerFlex();
+        min-width: 35px;
+        min-height: 35px;
+        border: 1px solid $white;
+        border-radius: 50%;
+        color: $white;
+        margin: 0 10px;
+        text-decoration: none;
+        &:hover {
+          border-color: $blue;
+          color: $blue;
+          transition: 0.5s;
+        }
+      }
+    }
+    .links {
+      min-width: 100%;
+      @include centerFlex();
+      a {
+        color: $D_icons;
+        margin: 0 2px;
+        font-size: 14px;
+        text-decoration: none;
+      }
+      p {
+        font-size: 14px;
+        color: $D_icons;
+      }
+    }
+    .copyright {
+      i {
+        color: $blue;
+      }
+      @include centerFlex();
+      flex-direction: column;
+      p {
+        font-size: 14px;
+        color: $D_icons;
+      }
+    }
+  }
+  .to-top {
+    position: fixed;
+    bottom: 30px;
+    right: -100px;
+    background-color: $D_blue;
+    min-width: 35px;
+    min-height: 35px;
+    border-radius: 5px;
+    @include centerFlex();
+    color: $white-smoke;
+    cursor: pointer;
+    text-decoration: none;
+    transition: right 1s;
+    transition: 0.2s;
+    box-shadow: $shadow_dark;
+    &:hover {
+      color: $white_smoke;
+      background-color: $blue;
+      box-shadow: none;
+    }
+    &.active {
+      right: 30px;
+    }
+    &.active-down {
+      background-color: $D_body;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  body .container {
+    #about {
+      height: 100%;
+    }
+    #skills {
+      height: 100%;
+    }
+    .qualifications {
+      height: 100%;
+    }
+    #services {
+      height: 100%;
+    }
+    #projects {
+      height: 40vh;
+      .left-btn {
+        position: absolute;
+        top: 70%;
+        left: 10px;
+        @include clearInput();
+        color: $blue;
+        font-size: 26px;
+        z-index: 555;
+        &.disable {
+          pointer-events: none;
+          color: $D_blue;
+          transition: all 0.5s;
+        }
+      }
+      .right-btn {
+        position: absolute;
+        top: 70%;
+        right: -5px;
+        @include clearInput();
+        color: $blue;
+        font-size: 26px;
+        z-index: 555;
+        &.disable {
+          pointer-events: none;
+          color: $D_blue;
+          transition: all 0.5s;
+        }
+      }
+      .carousel {
+        .carousel-track-container {
+          .carousel_nav {
+            position: absolute !important;
+            top: 40% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) !important;
+            width: 100% !important;
+          }
+        }
+      }
+    }
+    #blog {
+      height: 100%;
+    }
+    .testimonial {
+      height: 100%;
+    }
+    #contact {
+      height: 100%;
+      .contact-icon {
+        min-width: 16px;
+      }
+    }
+  }
+}
+@media (max-width: 850px) {
+  body header {
+    nav {
+      transition: background 0.5s;
+      .logo {
+        padding-top: 5px;
+      }
+      &.active {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: linear-gradient(
+          143.98deg,
+          rgba(255, 255, 255, -0.89) 0%,
+          rgba(255, 255, 255, -0.78) 100%
+        ) !important;
+        backdrop-filter: blur(4px) !important;
+        .logo {
+          position: fixed;
+          top: 3px;
+          left: 0;
+        }
+        .right {
+          position: fixed;
+          top: 5px;
+          right: 0;
+        }
+        ul {
+          margin-top: 200px;
+          display: block;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          position: fixed;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          li {
+            margin-top: 20px;
+            a {
+              font-size: 22px;
+            }
+          }
+        }
+      }
+      ul {
+        display: none;
+      }
+      .right {
+        display: flex;
+        span,
+        div {
+          display: block;
+          min-width: 50px;
+          min-height: 50px;
+          @include centerFlex();
+        }
+      }
+    }
+    .landing {
+      width: 100%;
+      .right-slider {
+        display: none;
+      }
+      .left-content {
+        width: 100%;
+      }
+    }
+  }
+  body .container {
+    #about {
+      .contain_frame {
+        height: 350px;
+      }
+      .square_frame {
+        top: 35px;
+        left: 40%;
+        transform: translateX(-40%);
+      }
+      .image {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    #skills {
+      .skills-grid {
+        width: 100%;
+      }
+    }
+    #projects {
+      height: 75vh !important;
+      .left-btn {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        @include clearInput();
+        color: $blue;
+        font-size: 26px;
+        z-index: 555;
+        &.disable {
+          pointer-events: none;
+          color: $D_blue;
+          transition: all 0.5s;
+        }
+      }
+      .right-btn {
+        position: absolute;
+        top: 50%;
+        right: -5px;
+        @include clearInput();
+        color: $blue;
+        font-size: 26px;
+        z-index: 555;
+        &.disable {
+          pointer-events: none;
+          color: $D_blue;
+          transition: all 0.5s;
+        }
+      }
+      .carousel {
+        height: 80vh;
+        .carousel-track-container {
+          height: 100%;
+          .carousel_nav {
+            position: absolute !important;
+            top: 68% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) !important;
+            width: 100% !important;
+          }
+          .carousel-track {
+            .carousel-slide {
+              grid-template-columns: repeat(1, 1fr) !important;
+              .image {
+                width: 85%;
+                height: 90%;
+                @include centerFlex();
+              }
+              .content {
+                p {
+                  width: 95%;
+                }
+                padding-left: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+    #blog {
+      height: 100%;
+    }
+  }
+  body footer {
+    .subscribe {
+      height: 60px;
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+      form {
+        input {
+          width: 65%;
+        }
+      }
+      .title {
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  body .container {
+    #about {
+      height: 100%;
+    }
+    #skills {
+      height: 100%;
+    }
+    .qualifications {
+      height: 100%;
+    }
+    #services {
+      height: 100%;
+    }
+    #projects {
+      height: 100vh !important;
+      .left-btn {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        @include clearInput();
+        color: $blue;
+        font-size: 26px;
+        z-index: 555;
+        &.disable {
+          pointer-events: none;
+          color: $D_blue;
+          transition: all 0.5s;
+        }
+      }
+      .right-btn {
+        position: absolute;
+        top: 50%;
+        right: -5px;
+        @include clearInput();
+        color: $blue;
+        font-size: 26px;
+        z-index: 555;
+        &.disable {
+          pointer-events: none;
+          color: $D_blue;
+          transition: all 0.5s;
+        }
+      }
+      .carousel {
+        height: 80vh;
+        .carousel-track-container {
+          height: 100%;
+          .carousel_nav {
+            position: absolute !important;
+            top: 80% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) !important;
+            width: 100% !important;
+          }
+          .carousel-track {
+            .carousel-slide {
+              grid-template-columns: repeat(1, 1fr) !important;
+              .image {
+                width: 90%;
+                height: 90%;
+                @include centerFlex();
+              }
+              .content {
+                p {
+                  width: 95%;
+                }
+                padding-left: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+    #blog {
+      height: 100%;
+      .head {
+        margin-top: 0;
+      }
+    }
+    .testimonial {
+      height: 100%;
+    }
+    #contact {
+      height: 100%;
+    }
+  }
+}
+@media (max-width: 576px) {
+  body header {
+    .landing .left-content .inner-content main {
+      min-width: 80%;
+    }
+    .landing .left-content .inner-content aside {
+      min-width: 20%;
+    }
+    nav .right {
+      margin-right: 5px;
+    }
+    nav .logo {
+      margin-left: 10px;
+    }
+  }
+  body .container {
+    #about {
+      height: 100%;
+      .contain_frame {
+        height: 350px;
+      }
+      .square_frame {
+        top: 35px;
+        left: 45%;
+        transform: translateX(-50%);
+      }
+      .image {
+        left: 54%;
+        transform: translateX(-50%);
+      }
+    }
+    #skills {
+      height: 100%;
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        .skill2 {
+          min-width: 60px;
+        }
+        .fold {
+          width: 40px;
+        }
+      }
+    }
+    .qualifications {
+      height: 90vh;
+    }
+    #services {
+      height: 100%;
+      .pop_up {
+        width: 350px;
+        position: fixed;
+        top: 50%;
+        left: 53%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    #projects {
+      height: 85vh;
+      .left-btn {
+        position: absolute;
+        top: 50%;
+        left: -5px;
+        @include clearInput();
+        color: $blue;
+        font-size: 26px;
+        z-index: 555;
+        &.disable {
+          pointer-events: none;
+          color: $D_blue;
+          transition: all 0.5s;
+        }
+      }
+      .right-btn {
+        position: absolute;
+        top: 50%;
+        right: -5px;
+        @include clearInput();
+        color: $blue;
+        font-size: 26px;
+        z-index: 555;
+        &.disable {
+          pointer-events: none;
+          color: $D_blue;
+          transition: all 0.5s;
+        }
+      }
+      .carousel {
+        height: 100%;
+        .carousel-track-container {
+          .carousel_nav {
+            position: absolute !important;
+            top: 490px !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) !important;
+            width: 100% !important;
+          }
+          .carousel-track {
+            .carousel-slide {
+              grid-template-columns: repeat(1, 1fr) !important;
+              .image {
+                width: 80%;
+                height: 90%;
+                @include centerFlex();
+              }
+              .content {
+                p {
+                  width: 85%;
+                }
+                padding-left: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+    #blog {
+      height: 100%;
+      .head {
+        margin-top: 150px;
+      }
+    }
+    .testimonial {
+      height: 100%;
+    }
+    #contact {
+      height: 100%;
+      .contact-icon {
+        min-width: 14px;
+      }
+    }
+  }
+  body .to-top {
+    bottom: 5px;
+    &.active {
+      right: 5px;
+    }
+  }
+  .intro {
+    h2 {
+      font-size: 20px;
+    }
+  }
+}
