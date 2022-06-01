@@ -1061,7 +1061,8 @@ body header .landing .left-content .inner-content main {
 }
 
 body header .landing .left-content .inner-content main .qoute {
-  width: 95%;
+  width: 90%;
+  text-align: justify;
 }
 
 body header .landing .left-content .inner-content main p {
@@ -1144,6 +1145,7 @@ body .container #about .head {
 
 body .container #about p {
   color: #888888;
+  text-align: justify;
 }
 
 body .container #about .contain_frame {

@@ -804,7 +804,8 @@ body {
             min-width: 75%;
             margin-top: 60px;
             .qoute {
-              width: 95%;
+              width: 90%;
+              text-align: justify;
             }
             p {
               color: $D_icons;
@@ -869,6 +870,7 @@ body {
       }
       p {
         color: $D_icons;
+        text-align: justify;
       }
       .contain_frame {
         width: 100%;
