@@ -111,6 +111,22 @@ body {
   background-color: #111 !important;
 }
 
+body #preload {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: #ffffff;
+  z-index: 100;
+  background-image: url(images/Loader.gif);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 20%;
+}
+
+body .hide_loader {
+  display: none;
+}
+
 body.active {
   overflow: hidden;
 }

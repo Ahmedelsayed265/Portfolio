@@ -1,3 +1,7 @@
+var loader = document.getElementById("preload");
+window.addEventListener("load", () => {
+  loader.classList.add("hide_loader");
+});
 //-------gsap intro animation---------------------------------------------------------//
 const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
 tl.to(".text", { y: "0%", duration: 1, stagger: 0.25 });

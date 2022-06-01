@@ -55,6 +55,20 @@
   transform: translateY(100%);
 }
 body {
+  #preload {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: $white;
+    z-index: 100;
+    background-image: url(images/Loader.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20%;
+  }
+  .hide_loader {
+    display: none;
+  }
   transition: all 0.5s;
   position: relative;
   scroll-behavior: smooth;
