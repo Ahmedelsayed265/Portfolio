@@ -2957,6 +2957,9 @@ body .to-top.active-down {
   body header .landing .left-content .inner-content main {
     min-width: 80%;
   }
+  body header .landing .left-content .inner-content main .qoute {
+    line-height: 1.4;
+  }
   body header .landing .left-content .inner-content aside {
     min-width: 20%;
   }
