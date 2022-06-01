@@ -216,6 +216,10 @@ body.light-theme header .landing .left-content .inner-content main .btns a:hover
   font-weight: 400;
 }
 
+body.light-theme .container .bullet {
+  background: #29129d;
+}
+
 body.light-theme .container #about .head {
   color: #29129d;
 }
@@ -1103,6 +1107,15 @@ body header .landing .left-content .inner-content main .btns a:hover {
   background-color: #e7a631;
 }
 
+body .container .bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #e7a631;
+  margin: 5px;
+  display: inline-block;
+}
+
 body .container #about {
   height: 100vh;
 }
@@ -1136,7 +1149,7 @@ body .container #about .square_frame {
   width: 320px;
   height: 320px;
   position: absolute;
-  top: 45px;
+  top: 0;
   left: 45px;
   border: 10px solid #212121;
 }
@@ -1145,7 +1158,7 @@ body .container #about .image {
   width: 320px;
   height: 320px;
   position: absolute;
-  top: 0;
+  top: 45px;
   left: 90px;
   background-image: url(images/shot6-9ohtDE-ozQbnk-p6xV2q.jpg);
   background-size: cover;
@@ -2720,7 +2733,6 @@ body .to-top.active-down {
     height: 350px;
   }
   body .container #about .square_frame {
-    top: 35px;
     left: 40%;
     -webkit-transform: translateX(-40%);
             transform: translateX(-40%);
@@ -2942,9 +2954,9 @@ body .to-top.active-down {
   }
   body .container #about .contain_frame {
     height: 350px;
+    margin-bottom: 15px;
   }
   body .container #about .square_frame {
-    top: 35px;
     left: 45%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);

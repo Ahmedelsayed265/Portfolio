@@ -171,6 +171,9 @@ body {
       }
     }
     .container {
+      .bullet{
+        background: $light_blue;
+      }
       #about {
         .head {
           color: $light_blue;
@@ -835,6 +838,14 @@ body {
     }
   }
   .container {
+    .bullet{
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: $blue;
+      margin:5px;
+      display: inline-block;
+    }
     #about {
       height: 100vh;
       .head {
@@ -855,7 +866,7 @@ body {
         width: 320px;
         height: 320px;
         position: absolute;
-        top: 45px;
+        top: 0;
         left: 45px;
         border: 10px solid $D_blue;
       }
@@ -863,7 +874,7 @@ body {
         width: 320px;
         height: 320px;
         position: absolute;
-        top: 0;
+        top: 45px;
         left: 90px;
         background-image: url(images/shot6-9ohtDE-ozQbnk-p6xV2q.jpg);
         background-size: cover;
@@ -1903,7 +1914,6 @@ body {
         height: 350px;
       }
       .square_frame {
-        top: 35px;
         left: 40%;
         transform: translateX(-40%);
       }
@@ -2107,9 +2117,9 @@ body {
       height: 100%;
       .contain_frame {
         height: 350px;
+        margin-bottom: 15px;
       }
       .square_frame {
-        top: 35px;
         left: 45%;
         transform: translateX(-50%);
       }
