@@ -787,16 +787,17 @@ body {
                   top: 50%;
                   left: 50%;
                   transform: translate(-50%, -50%);
-                  animation: scroll 1s alternate infinite;
+                  animation: scroll 1.5s ease-in-out infinite;
                 }
               }
             }
             @keyframes scroll {
-              0% {
-                top: 50%;
+              0% ,
+              100%{
+                top: 45%;
               }
-              100% {
-                top: 60%;
+              50% {
+                top: 65%;
               }
             }
           }

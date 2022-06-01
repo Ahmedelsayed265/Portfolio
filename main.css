@@ -1033,25 +1033,27 @@ body header .landing .left-content .inner-content aside .scrol .scroll-icon i {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-animation: scroll 1s alternate infinite;
-          animation: scroll 1s alternate infinite;
+  -webkit-animation: scroll 1.5s ease-in-out infinite;
+          animation: scroll 1.5s ease-in-out infinite;
 }
 
 @-webkit-keyframes scroll {
-  0% {
-    top: 50%;
-  }
+  0%,
   100% {
-    top: 60%;
+    top: 45%;
+  }
+  50% {
+    top: 65%;
   }
 }
 
 @keyframes scroll {
-  0% {
-    top: 50%;
-  }
+  0%,
   100% {
-    top: 60%;
+    top: 45%;
+  }
+  50% {
+    top: 65%;
   }
 }
 
