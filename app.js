@@ -1,22 +1,26 @@
 var loader = document.getElementById("preload");
 window.addEventListener("load", () => {
-  loader.classList.add("hide_loader");
+  setInterval(() => {
+    loader.classList.add("hide_loader");
+  }, 2500);
 });
-//-------gsap intro animation---------------------------------------------------------//
-const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
-tl.to(".text", { y: "0%", duration: 1, stagger: 0.25 });
-tl.to(".slider", { y: "-100%", duration: 1.5, delay: 0.25 });
-tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
-//------------before------------------------------------------------------------------//
-tl.fromTo("nav", { opacity: 0 }, { opacity: 1, duration: 1 });
-tl.fromTo("#home", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
-tl.fromTo("#about", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
-tl.fromTo("#skills", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
-tl.fromTo("#services", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
-tl.fromTo("#projects", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
-tl.fromTo("#blog", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
-tl.fromTo(".to-top", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
-tl.fromTo(".testimonial", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
+setTimeout(() => {
+  //-------gsap intro animation---------------------------------------------------------//
+  const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+  tl.to(".text", { y: "0%", duration: 1, stagger: 0.25 });
+  tl.to(".slider", { y: "-100%", duration: 1.5, delay: 0.25 });
+  tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
+  //------------before------------------------------------------------------------------//
+  tl.fromTo("nav", { opacity: 0 }, { opacity: 1, duration: 1 });
+  tl.fromTo("#home", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
+  tl.fromTo("#about", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
+  tl.fromTo("#skills", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
+  tl.fromTo("#services", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
+  tl.fromTo("#projects", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
+  tl.fromTo("#blog", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
+  tl.fromTo(".to-top", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
+  tl.fromTo(".testimonial", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
+}, 2700);
 //--------------(light-dark)theme-----------------------------------------------------//
 theme_icon = document.querySelector("#theme i");
 theme_icon.addEventListener("click", () => {
