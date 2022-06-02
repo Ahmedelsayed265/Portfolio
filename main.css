@@ -1128,7 +1128,6 @@ body header .landing .left-content .inner-content main .btns a:hover {
 body .container .bullet {
   width: 15px;
   height: 2px;
-  border-radius: 50%;
   background: #e7a631;
   margin: 7px 5px;
   display: inline-block;
