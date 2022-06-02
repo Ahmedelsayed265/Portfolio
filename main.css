@@ -121,7 +121,6 @@ body #preload {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 20%;
-  z-index: 999999;
 }
 
 body .hide_loader {
@@ -2663,6 +2662,9 @@ body .to-top.active-down {
 }
 
 @media (max-width: 850px) {
+  body #preload {
+    background-size: 45%;
+  }
   body header nav {
     -webkit-transition: background 0.5s;
     transition: background 0.5s;

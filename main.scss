@@ -65,7 +65,6 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 20%;
-    z-index: 999999;
   }
   .hide_loader {
     display: none;
@@ -186,7 +185,7 @@ body {
       }
     }
     .container {
-      .bullet{
+      .bullet {
         background: $light_blue;
       }
       #about {
@@ -793,8 +792,8 @@ body {
               }
             }
             @keyframes scroll {
-              0% ,
-              100%{
+              0%,
+              100% {
                 top: 45%;
               }
               50% {
@@ -854,7 +853,7 @@ body {
     }
   }
   .container {
-    .bullet{
+    .bullet {
       width: 15px;
       height: 2px;
       border-radius: 50%;
@@ -1855,6 +1854,9 @@ body {
   }
 }
 @media (max-width: 850px) {
+  body  #preload {
+    background-size: 45%;
+  }
   body header {
     nav {
       transition: background 0.5s;
@@ -2118,7 +2120,7 @@ body {
   body header {
     .landing .left-content .inner-content main {
       min-width: 80%;
-      .qoute{
+      .qoute {
         line-height: 1.4;
       }
     }
