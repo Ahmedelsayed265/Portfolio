@@ -121,6 +121,7 @@ body #preload {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 20%;
+  z-index: 999999;
 }
 
 body .hide_loader {
@@ -1126,11 +1127,11 @@ body header .landing .left-content .inner-content main .btns a:hover {
 }
 
 body .container .bullet {
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 2px;
   border-radius: 50%;
   background: #e7a631;
-  margin: 5px;
+  margin: 7px 5px;
   display: inline-block;
 }
 

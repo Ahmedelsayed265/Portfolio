@@ -65,6 +65,7 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 20%;
+    z-index: 999999;
   }
   .hide_loader {
     display: none;
@@ -854,11 +855,11 @@ body {
   }
   .container {
     .bullet{
-      width: 10px;
-      height: 10px;
+      width: 15px;
+      height: 2px;
       border-radius: 50%;
-      background: $blue;
-      margin:5px;
+      background: #e7a631;
+      margin: 7px 5px;
       display: inline-block;
     }
     #about {
