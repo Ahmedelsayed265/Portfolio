@@ -24,11 +24,11 @@ theme_icon.addEventListener("click", () => {
   if (document.body.classList.contains("light-theme")) {
     theme_icon.classList.add("fa-sun");
     theme_icon.classList.remove("fa-moon");
-    document.querySelector(".logo a img").src = "images/LOGO2.png";
+    document.querySelector(".logo a img").src = "images/LOGO2-min.png";
   } else {
     theme_icon.classList.add("fa-moon");
     theme_icon.classList.remove("fa-sun");
-    document.querySelector(".logo a img").src = "images/LOGO.png";
+    document.querySelector(".logo a img").src = "images/LOGO-min.png";
   }
 });
 //-------typed.js landing section--------------------------------------------------//

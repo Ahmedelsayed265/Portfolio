@@ -117,7 +117,7 @@ body #preload {
   position: fixed;
   background: #ffffff;
   z-index: 100;
-  background-image: url(images/Loader.gif);
+  background-image: url(images/Loader-min.gif);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 20%;
@@ -1178,7 +1178,7 @@ body .container #about .image {
   position: absolute;
   top: 45px;
   left: 90px;
-  background-image: url(images/shot6-9ohtDE-ozQbnk-p6xV2q.jpg);
+  background-image: url(images/shot6-9ohtDE-ozQbnk-p6xV2q-min.jpg);
   background-size: cover;
 }
 
